@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "total_properties": 399,
+    "avg_price": 325567.0500250627,
+    "property_types": {
+      "HOUSE": 207,
+      "APARTMENT": 192
+    },
+    "timestamp": "2025-09-12T11:27:16.773240"
+  },
+  "price_statistics": {
+    "min": 4000.0,
+    "max": 549000.0,
+    "median": 345100.0,
+    "std": 156847.2920279499,
+    "count": 399
+  },
+  "location_statistics": {
+    "Koksijde": 15,
+    "Pittem": 13,
+    "Blankenberge": 11,
+    "Gent": 9,
+    "Genk": 9,
+    "Hasselt": 8,
+    "De Panne": 7,
+    "Oostende": 6,
+    "Tongeren": 6,
+    "Veurne": 5,
+    "Sint-Niklaas": 5,
+    "Poperinge": 5,
+    "Diepenbeek": 4,
+    "Geel": 4,
+    "Nieuwpoort": 4,
+    "Roeselare": 4,
+    "Knokke": 4,
+    "Zedelgem": 4,
+    "Elsene": 4,
+    "Aalst": 4
+  },
+  "model_prediction": {}
+}
