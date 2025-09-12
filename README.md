@@ -135,4 +135,4 @@ When everything works perfectly:
 
 ## 📊 Demo Dashboard
 
-[Visit Demo Dashboard]()
+[Visit Demo Dashboard](https://immo-be.streamlit.app/)
