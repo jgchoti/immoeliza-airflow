@@ -166,7 +166,8 @@ class Scraper:
         
         soup = BeautifulSoup(raw_html, "html.parser")
         retrieve = Retriever(soup)
- 
+        
+        # get zimmo code
         zimmo_code = retrieve.get_zimmo_code()
         if not zimmo_code:
             print(f"⚠️ Skipped property with missing zimmo_code: {retrieve.url}")
