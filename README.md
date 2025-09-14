@@ -212,7 +212,6 @@ docker-compose up -d
 ## 📊 Demo Dashboard
 
 [Visit Demo Dashboard](https://immo-be.streamlit.app/)
+![dashboard](/assets/immo-dashboard.png)
 
 ---
-
-**Need help?** Check the troubleshooting section above or open an issue!
