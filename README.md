@@ -31,6 +31,8 @@ This is an **extension** of my original [Zimmo scraping project](https://github.
 - 🌊 **Apache Airflow**: Workflow orchestration
 - 🐳 **Docker**: Containerized deployment
 
+![airflow](/assets/airflow.png)
+
 ### Features
 
 - **Multi-range price scraping** – Collects data across all property price ranges
