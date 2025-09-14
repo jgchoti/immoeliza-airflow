@@ -12,7 +12,7 @@ class PropertyScraper:
     def __init__(self, category_type, max_workers=None, db_uri=None ):
         self.max_workers = 2
         self.max_price_ranges = 50
-        self.max_pages_per_range = 100
+        self.max_pages_per_range = 1
         self.db_uri = db_uri
         self.scraper = None
         self.output = None

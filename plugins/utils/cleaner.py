@@ -104,9 +104,8 @@ class Cleaner:
         dot_count = num_str.count('.')
         comma_count = num_str.count(',')
     
-        # Handle mixed separators (dot and comma)
+        
         if dot_count > 0 and comma_count > 0:
-        # Determine which is decimal separator based on position
             last_comma_pos = num_str.rfind(',')
             last_dot_pos = num_str.rfind('.')
         
@@ -123,42 +122,34 @@ class Cleaner:
                 # Multiple commas = thousand separators: 1,234,567
                 num_str = num_str.replace(',', '')
             else:
-                # Single comma - determine if thousand separator or decimal
                 parts = num_str.split(',')
                 if len(parts) == 2 and len(parts[1]) == 3 and parts[1].isdigit():
-                    # Thousand separator: 1,234
                     num_str = num_str.replace(',', '')
                 else:
-                    # Decimal separator: 1,25
                     num_str = num_str.replace(',', '.')
     
         # Handle dot-only formatting
         elif dot_count > 0 and comma_count == 0:
             if dot_count > 1:
-                # Multiple dots = thousand separators: 1.234.567
                 num_str = num_str.replace('.', '')
             else:
-                # Single dot - determine if thousand separator or decimal
                 parts = num_str.split('.')
                 if len(parts) == 2 and len(parts[1]) == 3 and parts[1].isdigit():
                     # Likely thousand separator: 1.234
                     num_str = num_str.replace('.', '')
-                # Otherwise keep as decimal separator
+        
     
-        # Clean up any remaining non-numeric characters except decimal point
         num_str = re.sub(r'[^0-9.-]', '', num_str)
     
-        # Validate the result
+
         if not num_str or num_str in ['.', '-', '-.']:
             return None
     
-        # Handle multiple decimal points that might remain
         if num_str.count('.') > 1:
             return None
     
         try:
             value = float(num_str)
-            # Return integer if the value is a whole number
             return int(value) if value.is_integer() else value
         except ValueError:
             return None

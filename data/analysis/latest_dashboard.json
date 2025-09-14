@@ -1,41 +1,64 @@
 {
   "summary": {
-    "total_properties": 399,
-    "avg_price": 325567.0500250627,
+    "total_properties": 38196,
+    "avg_price": 468699.97721175,
     "property_types": {
-      "HOUSE": 207,
-      "APARTMENT": 192
+      "HOUSE": 23025,
+      "APARTMENT": 15171
     },
-    "timestamp": "2025-09-12T11:27:16.773240"
+    "timestamp": "2025-09-14T18:19:37.040268"
   },
   "price_statistics": {
     "min": 4000.0,
-    "max": 549000.0,
-    "median": 345100.0,
-    "std": 156847.2920279499,
-    "count": 399
+    "max": 15000000.0,
+    "median": 365000.0,
+    "std": 455879.44789065875,
+    "count": 38196
   },
   "location_statistics": {
-    "Koksijde": 15,
-    "Pittem": 13,
-    "Blankenberge": 11,
-    "Gent": 9,
-    "Genk": 9,
-    "Hasselt": 8,
-    "De Panne": 7,
-    "Oostende": 6,
-    "Tongeren": 6,
-    "Veurne": 5,
-    "Sint-Niklaas": 5,
-    "Poperinge": 5,
-    "Diepenbeek": 4,
-    "Geel": 4,
-    "Nieuwpoort": 4,
-    "Roeselare": 4,
-    "Knokke": 4,
-    "Zedelgem": 4,
-    "Elsene": 4,
-    "Aalst": 4
+    "Antwerpen": 1055,
+    "Oostende": 764,
+    "Knokke": 745,
+    "Gent": 604,
+    "Roeselare": 505,
+    "Hasselt": 434,
+    "Blankenberge": 374,
+    "Kortrijk": 362,
+    "Genk": 324,
+    "Deurne": 303,
+    "Koksijde": 294,
+    "Ukkel": 291,
+    "Brugge": 289,
+    "Turnhout": 282,
+    "Nieuwpoort": 277,
+    "Brussel": 250,
+    "Sint-Niklaas": 243,
+    "Elsene": 234,
+    "Brasschaat": 230,
+    "Aalst": 229
   },
-  "model_prediction": {}
+  "model_prediction": {
+    "model_file": "price_model_20250912_113151.joblib",
+    "timestamp": "20250912_113151",
+    "train_mae": 91991.80554692137,
+    "test_mae": 123731.94449884142,
+    "train_r2": 0.3785043759191741,
+    "test_r2": 0.28078242579014767,
+    "train_rmse": 120043.46672809613,
+    "test_rmse": 145263.21709789473,
+    "features_used": [
+      "bedroom",
+      "bathroom",
+      "garage",
+      "mobiscore"
+    ],
+    "training_samples": 319,
+    "test_samples": 80,
+    "feature_importance": {
+      "bedroom": 0.27856096295555033,
+      "bathroom": 0.10636666950904575,
+      "garage": 0.002198303978671874,
+      "mobiscore": 0.612874063556732
+    }
+  }
 }
