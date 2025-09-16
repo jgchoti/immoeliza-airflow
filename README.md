@@ -193,6 +193,27 @@ docker-compose down -v
 docker-compose up -d
 ```
 
+## ✅ Best Practices
+
+While building this project, I also picked up some Airflow [best practices](https://airflow.apache.org/docs/apache-airflow/3.0.6/best-practices.html) that made things more reliable and maintainable:
+
+- **Keep imports at the task level**
+  Instead of importing heavy libraries at the top of the DAG file, import them inside the task function to keeps the scheduler lightweight.
+
+- **Use a linter/formatter (Ruff)**
+
+```
+ruff check dags/ --select AIR3 --preview
+```
+
+(This runs Ruff’s rule for detecting imports in Airflow DAGs,” which is a common pitfall.)
+
+- **Small, modular tasks**
+  Better to have more lightweight tasks
+
+- **Don’t overload the scheduler**
+  Use task parallelism wisely ( set via AIRFLOW_PARALLELISM and MAX_ACTIVE_TASKS_PER_DAG).
+
 ## 📝 Future Enhancements
 
 - 📱 **Enhanced Streamlit dashboard**: More interactive features and real-time updates
